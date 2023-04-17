@@ -1,0 +1,21 @@
+<apex:page controller="MyController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection >
+                <apex:inputText label="Username" value="{!username}"/>
+                <apex:inputSecret label="Password" value="{!password}"/>
+                <apex:commandButton value="Login" action="{!login}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputText label="Username" value="{!newUsername}"/>
+                <apex:inputSecret label="Password" value="{!newPassword}"/>
+                <apex:inputSecret label="Confirm Password" value="{!confirmPassword}"/>
+                <apex:commandButton value="Sign Up" action="{!signup}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
