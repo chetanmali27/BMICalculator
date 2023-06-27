@@ -1,9 +1,40 @@
+:host(){
+    --dark-blue : #0b0d21;
+    --light-white : #fafafa;
+    --light-blue : #4f7df9;
+    --light-pink : #e91e63;
+    --dull-blue : #1d1e33;
+    --size-16: 16px;
+    --size-14: 14px;
+    --szie-12: 12px;
+}
+
 .box{
-	max-width: 420px;
+	max-width: 450px;
     margin: auto;
     text-align: center;
-    background: black;
-    color: white;
-    padding: 16px;
+    background: var(--dark-blue);
+    color: var(--light-white);
+    padding: var(--size-16);
     border-radius: 38px;
+}
+
+h1{
+    font-size: 36px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.info-wrapper{
+    background: #1d1e33;
+    padding: var(--size-16);
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    font-size: var(--size-14);
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    color: var(--light-pink);
 }
