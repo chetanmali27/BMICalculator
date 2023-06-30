@@ -9,4 +9,6 @@ Salesforce,Lightning Web Components,Salesforce Community Cloud
 
 #### Screenshots
 <img width="959" alt="image" src="https://github.com/mali-chetan/BMICalculator/assets/88312679/e062a0e5-87c8-4969-8cfa-0af96a3d8380">
+<img width="959" alt="image" src="https://github.com/mali-chetan/BMICalculator/assets/88312679/b29f6a38-5d65-4a2e-bfc5-e7773b88a974">
+
 
