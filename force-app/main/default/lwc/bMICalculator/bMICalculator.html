@@ -3,28 +3,32 @@
     <div class="app">
         <div class="box">
             <h1>BMI Calculator</h1>
-            <section>
-                <h2>Your BMI value is:</h2>
-                <div class="bmi-value">{bmiCalculated}</div>
-                <h2>So you are:</h2>
-                <div class="bmi-value">{bmiResult}</div>
-                <button class="slds-button slds-button_neutral slds-button_stretch btn" onclick={reCalculateBMI}>Re-Calculate</button>
-            </section>
-            <form>
-					<div class="slds-form-element slds-m-bottom_medium">
-						<label class="slds-form-element__label" for="inpt-height">Height(cm)</label>
-						<div class="slds-form-element__control">
-							<input type="number" id="inpt-height" name="height" placeholder="Enter you height in cm" required min="1"/>
-						</div>
-					</div>
-					<div class="slds-form-element slds-m-bottom_medium">
-						<label class="slds-form-element__label" for="form-element-03">Weight(kg)</label>
-						<div class="slds-form-element__control">
-							<input type="number" id="inpt-weight" name="weight" placeholder="Enter you weight in kg" required min="1" />
-						</div>
-					</div>
-					<button class="slds-button slds-button_neutral slds-button_stretch custButton">Calculate</button>
-			</form>
+            <template if:true={reCalculateCheck}>
+				<section>
+					<h2>Your BMI value is:</h2>
+					<div class="bmi">{bmiValue}</div>
+					<h2>So you are:</h2>
+					<div class="bmi">{bmiStatus}</div>
+					<button class="slds-button slds-button_neutral slds-button_stretch custButton" onclick={reCalculateBMI}>Re-Calculate</button>
+				</section>
+			</template>
+            <template if:false={reCalculateCheck}>
+                <form onsubmit={handleSubmit}>
+                        <div class="slds-form-element slds-m-bottom_medium">
+                            <label class="slds-form-element__label" for="input-height">Height(cm)</label>
+                            <div class="slds-form-element__control">
+                                <input type="number" id="input-height" name="height" placeholder="Enter you height in cm" required min="1" max ="300" onchange={onHandleChange} class="slds-input"/>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-m-bottom_medium">
+                            <label class="slds-form-element__label" for="input-weight">Weight(kg)</label>
+                            <div class="slds-form-element__control">
+                                <input type="number" id="input-weight" name="weight" placeholder="Enter you weight in kg" required min="1" max ="500" onchange={onHandleChange} class="slds-input"/>
+                            </div>
+                        </div>
+                        <button class="slds-button slds-button_neutral slds-button_stretch custButton">Calculate</button>
+                </form>
+            </template>
             <div class="info-wrapper">
                 <h2>What your BMI Means</h2>
                 <p class="slds-var-m-bottom_medium">Once you have measured your BMI, you can determine your healthy

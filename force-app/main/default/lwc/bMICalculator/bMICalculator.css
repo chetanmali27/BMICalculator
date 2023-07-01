@@ -60,3 +60,8 @@ input{
     border: none;
     margin: 20px 0px 20px 0px;
 }
+
+.bmi{
+    font-size: 25px;
+    color: var(--light-blue);
+}
